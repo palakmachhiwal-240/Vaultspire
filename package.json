@@ -1,0 +1,26 @@
+{
+  "name": "vaultspire",
+  "version": "1.0.0",
+  "description": "VaultSpire - A decentralized Ethereum vault for secure deposits and withdrawals.",
+  "main": "hardhat.config.js",
+  "scripts": {
+    "test": "npx hardhat test",
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run scripts/deploy.js --network sepolia"
+  },
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "hardhat",
+    "vault",
+    "defi"
+  ],
+  "author": "Mriganka Shekhar Barman",
+  "license": "MIT",
+  "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "dotenv": "^16.0.3",
+    "ethers": "^6.7.0",
+    "hardhat": "^2.22.0"
+  }
+}

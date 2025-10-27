@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment files
+.env
+
+# Hardhat build outputs
+artifacts/
+cache/
+
+# IDE/System files
+.vscode/
+.DS_Store
