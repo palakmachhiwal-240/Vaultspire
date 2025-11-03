@@ -1,17 +1,23 @@
-require("@nomicfoundation/hardhat-toolbox");
+/**
+ * @type import('hardhat/config').HardhatUserConfig
+ */
+require("@nomiclabs/hardhat-waffle");
+require("@nomiclabs/hardhat-ethers");
 require("dotenv").config();
 
-const { PRIVATE_KEY, ALCHEMY_API_URL } = process.env;
-
 module.exports = {
-  solidity: "0.8.20",
+  solidity: "0.8.17",
   networks: {
-    sepolia: {
-      url: ALCHEMY_API_URL || "",
-      accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
+    coreTestnet: {
+      url: "https://rpc.test2.btcs.network",
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      chainId: 1114,
     },
   },
-  etherscan: {
-    apiKey: "your_etherscan_api_key_if_needed",
+  paths: {
+    artifacts: "./artifacts",
+    cache: "./cache",
+    sources: "./contracts",
+    tests: "./test",
   },
 };
